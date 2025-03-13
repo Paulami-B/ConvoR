@@ -4,17 +4,19 @@ import { HiOutlineEye, HiOutlineEyeOff } from "react-icons/hi"
 type PasswordInputBoxProps = {
     name: string,
     label: string,
-    required?: boolean
+    required?: boolean,
+    handleChange: React.ChangeEventHandler<HTMLInputElement>
 }
 
-export default function PasswordInputBox({name, label, required}: PasswordInputBoxProps) {
+export default function PasswordInputBox({name, label, required, handleChange}: PasswordInputBoxProps) {
     const [type, setType] = useState<'text' | 'password'>('password');
     return (
         <div className="py-2">
             <div className="relative">
                 <input name={name} type={type} required={required ? required : true}
                 className="block pb-1 px-2 pt-2 pr-15 text-sm w-full bg-transparent rounded-lg border-1 border-gray-400 appearance-none 
-                focus:outline-none focus:ring-0 focus:border-orange-500 peer" placeholder=" " />
+                focus:outline-none focus:ring-0 focus:border-orange-500 peer" placeholder=" "
+                onChange={handleChange} />
                 <label className="absolute  text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 bg-white top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-orange-500 
                 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 
                 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">
