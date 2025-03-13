@@ -15,18 +15,18 @@ export default function AuthPage() {
                         <GoogleAuth />
                     </div>
                     {activeTab=='signup' ? (
-                        <p className='font-caveat text-3xl'>Hey, there!! Please sign up to get started</p>
+                        <p className='font-caveat text-3xl dark:text-orange-300'>Hey, there!! Please sign up to get started</p>
                     ) : (
-                        <p className='font-caveat text-3xl'>Welcome back!! Please sign in to continue</p>
+                        <p className='font-caveat text-3xl dark:text-orange-300'>Welcome back!! Please sign in to continue</p>
                     )}
-                    <div className='flex w-full mt-16 md:mt-4'>
-                        <button className={`w-1/2 p-2 cursor-pointer hover:font-bold border-b-4 
-                        ${activeTab=='signup' ? "font-bold border-orange-400": "font-semibold border-gray-200"}`} 
+                    <div className='flex w-full mt-16 md:mt-4 dark:text-orange-400'>
+                        <button className={`w-1/2 p-2 cursor-pointer hover:font-bold border-b-4
+                        ${activeTab=='signup' ? "font-bold border-orange-400": "font-semibold border-gray-200 dark:border-gray-500"}`} 
                         onClick={() => setActiveTab('signup')}>
                             Sign up
                         </button>
                         <button className={`w-1/2 p-2 cursor-pointer hover:font-bold border-b-4 
-                        ${activeTab=='signin' ? "font-bold border-orange-400": "font-semibold border-gray-200"}`} 
+                        ${activeTab=='signin' ? "font-bold border-orange-400": "font-semibold border-gray-200 dark:border-gray-500"}`} 
                         onClick={() => setActiveTab('signin')}>
                             Sign In
                         </button>
@@ -40,7 +40,7 @@ export default function AuthPage() {
                     </div>
                 </div>
             </div>
-            <div className='hidden md:col-span-1 bg-orange-50 h-screen w-full md:flex justify-center p-8'>
+            <div className='hidden md:col-span-1 bg-orange-50 dark:bg-orange-800 h-screen w-full md:flex justify-center p-8'>
                 <div>
                     <img src='./AuthImage.png' width={450}/>
                     <p className='font-caveat text-center text-4xl my-8'>Talk. Share. Stay in touch.</p>

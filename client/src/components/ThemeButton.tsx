@@ -16,7 +16,7 @@ export default function ThemeButton() {
     
     return (
         <button 
-        className="rounded-lg w-fit h-fit flex justify-center p-2 md:ml-3 md:my-8 cursor-pointer hover:bg-orange-300 hover:text-white dark:hover:bg-orange-700 dark:hover:text-black text-black dark:text-orange-50 text-2xl" 
+        className="rounded-lg w-fit h-fit flex justify-center p-2 ml-3 md:my-8 cursor-pointer hover:bg-orange-300 hover:text-white dark:hover:bg-orange-700 dark:hover:text-black text-black dark:text-orange-50 text-2xl" 
         onClick={toggleTheme}>
             {theme=="light" ? (
                 <BsMoonStars strokeWidth={0.4} />

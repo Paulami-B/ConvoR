@@ -28,7 +28,7 @@ export default function VerticalSideBar({option, setOption}: SideBarPropsTypes) 
                                 {item.icon}
                             </button>
                             {item.title=='call' && (
-                                <hr className="text-gray-300 text-4xl font-bold" />
+                                <hr className="text-gray-300 w-4/5 font-bold" />
                             )}
                         </li>
                     ))}
