@@ -4,4 +4,7 @@
     --font-matemasie: "Matemasie", serif;
     --font-caveat: "Caveat Brush", serif;
     --font-pacifico: "Pacifico", serif;
+    --color-brown: oklch(0.3095 0.131 28.56);
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
