@@ -2,9 +2,9 @@ import { create } from "zustand"
 import { createJSONStorage, persist } from "zustand/middleware"
 
 interface ThemeState{
-    theme: 'light' | 'dark'
-    toggleTheme: () => void
-  }
+  theme: 'light' | 'dark'
+  toggleTheme: () => void
+}
   
 export const useThemeStore = create<ThemeState>()(
   persist(

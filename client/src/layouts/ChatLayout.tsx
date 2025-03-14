@@ -18,7 +18,7 @@ export default function ChatLayout() {
     <div className="md:grid md:grid-cols-11 divide-x divide-orange-100 dark:divide-orange-900">
         <div className={`${activeTab=='chats' ? 'block' : 'hidden'} md:block col-span-4 lg:col-span-3`}>
           <Contacts selectTab={setTab} handleChat={handleChat} />
-          <HorizontalSideBar option={option} setOption={setOption} />
+          <HorizontalSideBar />
         </div>
         <div className={`${activeTab=='chatContainer' ? 'block' : 'hidden'} md:block col-span-7 lg:col-span-8`}>
           <ChatContainer selectTab={setTab} handleChat={handleChat} />

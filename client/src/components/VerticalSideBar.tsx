@@ -1,14 +1,11 @@
 import Icon from "./Icon";
 import { Link } from "react-router-dom";
-import { sidebarMenuItems, TitleType } from "../utils/props/SideBarProps";
+import { sidebarMenuItems } from "../utils/props/SideBarProps";
 import ThemeButton from "./ThemeButton";
+import { useSetOption } from "../utils/customHooks/menuOption";
 
-export type SideBarPropsTypes = {
-    option: TitleType,
-    setOption: React.Dispatch<React.SetStateAction<TitleType>>
-}
-
-export default function VerticalSideBar({option, setOption}: SideBarPropsTypes) {
+export default function VerticalSideBar() {
+    const { option, setOption } = useSetOption();
   return (
     <div className="top-0 sticky h-screen w-full bg-orange-50 dark:bg-espresso dark:bg-brown shadow-lg">
         <div className="flex justify-center items-center relative h-full">
@@ -24,7 +21,10 @@ export default function VerticalSideBar({option, setOption}: SideBarPropsTypes) 
                                 "bg-orange-400 text-white dark:bg-orange-600/80 dark:text-black" 
                                 : 
                                 "hover:bg-orange-300 hover:text-white dark:hover:bg-orange-700 dark:hover:text-black"}`}
-                            onClick={() => setOption(item.title)}>
+                            onClick={() => {
+                                setOption(item.title)
+                                console.log(option)
+                            }}>
                                 {item.icon}
                             </button>
                             {item.title=='call' && (
