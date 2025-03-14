@@ -10,13 +10,13 @@ export default function BlockedContacts() {
             <div className='flex justify-between gap-3 my-1 w-full items-center'>
                 <div className='flex gap-3 items-center'>
                     <img src='https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D'
-                    className='w-12 h-12 rounded-full' />
-                    <div>
+                    className='w-12 h-12 rounded-full dark:border-2 dark:border-orange-700' />
+                    <div className='dark:text-gray-100'>
                         <p className='text-sm font-bold'>Red Panda</p>
                         <p className='text-xs'>Explorer</p>
                     </div>
                 </div>
-                <HiOutlineMinusCircle size={20} className='cursor-pointer hover:text-orange-500' />
+                <HiOutlineMinusCircle size={20} strokeWidth={3} className='cursor-pointer hover:text-orange-500 dark:text-orange-100' />
             </div>
         </div>
     </div>

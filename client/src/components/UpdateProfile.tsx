@@ -48,11 +48,11 @@ export default function UpdateProfile() {
         <img src={imageURL} 
         className="rounded-full w-25 h-25 border-4 border-orange-500" />
         <div className="flex gap-3">
-          <button className="cursor-pointer border-3 border-orange-500 hover:bg-orange-500 h-fit p-2 rounded-lg font-bold hover:text-white"
+          <button className="cursor-pointer border-3 border-orange-500 hover:bg-orange-500 h-fit p-2 rounded-lg font-bold dark:text-gray-200 hover:text-white"
           onClick={handleImageChange}>
             Upload Image
           </button>
-          <button className="cursor-pointer border-3 border-purple-500 hover:bg-purple-500 h-fit p-2 rounded-lg font-bold hover:text-white"
+          <button className="cursor-pointer border-3 border-purple-500 hover:bg-purple-500 h-fit p-2 rounded-lg font-bold dark:text-gray-200 hover:text-white"
           onClick={changeAvatar}>
             Set Avatar
           </button>
@@ -64,8 +64,8 @@ export default function UpdateProfile() {
         <PasswordInputBox name="npassword" label="New Password" handleChange = {handleChange} />
         <PasswordInputBox name="cpassword" label="Current Password" handleChange = {handleChange} />
         <div className="flex justify-between mt-7">
-          <button className="cursor-pointer border-3 border-red-500 hover:bg-red-500 h-fit p-2 rounded-lg font-bold hover:text-white">Delete Account</button>
-          <button className="cursor-pointer border-3 border-green-500 hover:bg-green-500 h-fit p-2 rounded-lg font-bold hover:text-white">Save Changes</button>
+          <button className="cursor-pointer border-3 border-red-500 hover:bg-red-500 h-fit p-2 rounded-lg font-bold dark:text-gray-200 hover:text-white">Delete Account</button>
+          <button className="cursor-pointer border-3 border-green-500 hover:bg-green-500 h-fit p-2 rounded-lg font-bold dark:text-gray-200 hover:text-white">Save Changes</button>
         </div>
       </div>
     </div>

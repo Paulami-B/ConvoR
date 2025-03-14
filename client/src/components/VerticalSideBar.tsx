@@ -10,13 +10,13 @@ export default function VerticalSideBar() {
         <div className="top-0 sticky h-screen w-full bg-orange-50 dark:bg-espresso dark:bg-brown shadow-lg">
             <div className="flex justify-center items-center relative h-full">
                 <div className="absolute top-0 ml-3">
-                    <div className="flex justify-center pt-3 pb-8 ml-0">
-                        <Icon size="text-7xl" />
+                    <div className="flex justify-center my-5">
+                        <Icon size="text-6xl" />
                     </div>
                     <ul>
                         {sidebarMenuItems.map((item) =>(
                             <li key={item.title}>
-                                <button className={`cursor-pointer rounded-lg w-fit h-fit flex justify-center p-2 ml-1 my-8 text-black dark:text-orange-50 text-2xl 
+                                <button className={`cursor-pointer rounded-lg w-fit h-fit flex justify-center p-2 ml-1 my-3 text-black dark:text-orange-50 text-2xl 
                                 ${option==item.title ? 
                                     "bg-orange-400 text-white dark:bg-orange-600/80 dark:text-black" 
                                     : 

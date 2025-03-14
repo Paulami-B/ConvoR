@@ -14,7 +14,7 @@ export default function PrivacyOptions() {
             <ul>
                 {privacyItems.map((item) => (
                     item.option=='Blocked Contacts' ? (
-                        <button className='text-gray-500 dark:text-gray-100 cursor-pointer'
+                        <button className='text-gray-500 dark:text-gray-100 cursor-pointer hover:text-black'
                         onClick={() => setModalData('Blocked')}>
                             <div className='text-sm font-bold'>{item.option}</div>
                             <div className='text-xs text-start'>{item.subtext}</div>

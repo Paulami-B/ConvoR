@@ -10,16 +10,16 @@ export default function SettingsSideBar({setShowModal}: {setShowModal: React.Dis
                     <div className="pt-5 pb-8 ml-3 font-bold text-3xl dark:text-warmamber">
                         Settings
                     </div>
-                    <button className='cursor-pointer flex justify-start mx-6 items-center gap-6 dark:text-gold'
+                    <button className='cursor-pointer flex justify-start mx-6 items-center gap-6 dark:text-gold hover:font-bold'
                     onClick={() => {
                         setShowModal(true);
                         setModalData('Profile')
                     }}>
                         <img src='https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D' 
-                        className="rounded-full w-15 h-15" />
+                        className="rounded-full w-15 h-15 hover:border-2" />
                         <div>
                             <div className='font-bold'>Red Panda</div>
-                            <div className='text-sm'>Exploring</div>
+                            <div className='text-sm text-start'>Exploring</div>
                         </div>
                     </button>
                   <ul className='my-12'>
