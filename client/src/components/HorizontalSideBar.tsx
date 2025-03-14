@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { sidebarMenuItems } from "../utils/props/SideBarProps";
 import ThemeButton from "./ThemeButton";
-import { useSetOption } from "../utils/customHooks/menuOption";
+import { useOptionStore } from "../utils/slices/menuSlice";
 
 export default function HorizontalSideBar() {
-    const { option, setOption } = useSetOption();
+    const { option, setOption } = useOptionStore();
     return (
         <div className="block md:hidden w-screen bottom-0 sticky bg-orange-50 dark:bg-[#601B00] dark:shadow-orange-200 p-2">
             <ul className="w-full flex justify-evenly items-center">

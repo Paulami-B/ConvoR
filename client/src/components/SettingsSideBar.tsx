@@ -1,11 +1,8 @@
-import { settingsMenuItems, SettingType } from '../utils/props/SettingsProps'
+import { settingsMenuItems } from '../utils/props/SettingsProps'
+import { useModalStore } from '../utils/slices/menuSlice'
 
-type SettingsSideBarProps = {
-    setShowModal: React.Dispatch<React.SetStateAction<boolean>>,
-    setModalData: React.Dispatch<React.SetStateAction<SettingType | undefined>>
-}
-
-export default function SettingsSideBar({setShowModal, setModalData}: SettingsSideBarProps) {
+export default function SettingsSideBar({setShowModal}: {setShowModal: React.Dispatch<React.SetStateAction<boolean>>}) {
+    const {setModalData} = useModalStore();
     return (
       <div className="top-0 sticky h-screen w-full bg-orange-50 dark:bg-brown dark:shadow-orange-200 shadow-lg">
           <div className="flex relative h-full">
@@ -13,7 +10,7 @@ export default function SettingsSideBar({setShowModal, setModalData}: SettingsSi
                     <div className="pt-5 pb-8 ml-3 font-bold text-3xl dark:text-warmamber">
                         Settings
                     </div>
-                    <button className='cursor-pointer flex justify-start mx-6 items-center gap-6 text-gold'
+                    <button className='cursor-pointer flex justify-start mx-6 items-center gap-6 dark:text-gold'
                     onClick={() => {
                         setShowModal(true);
                         setModalData('Profile')
@@ -37,7 +34,7 @@ export default function SettingsSideBar({setShowModal, setModalData}: SettingsSi
                                 <div className='text-base'>{item.title}</div>
                             </div>
                             {item.title!='Help' && (
-                                <hr className="text-gray-300 dark:text-orange-800 text-4xl font-bold my-3" />
+                                <hr className="text-gray-300 dark:text-orange-00 text-4xl font-bold my-3" />
                             )}
                         </li>
                       ))}

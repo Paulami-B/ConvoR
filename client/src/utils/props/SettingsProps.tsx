@@ -11,8 +11,9 @@ import SecurityOptions from "../../components/SecurityOptions";
 import AccountInfo from "../../components/AccountInfo";
 import KeyboardShortcuts from "../../components/KeyboardShortcuts";
 import UpdateProfile from "../../components/UpdateProfile";
+import BlockedContacts from "../../components/BlockedContacts";
 
-export type SettingType = 'Profile' | 'Notifications' | 'Privacy' | 'Security' | 'Wallpaper'| 'Request Account Info' | 'Keyboard Shortcuts' | 'Help'
+export type SettingType = 'Profile' | 'Notifications' | 'Privacy' | 'Blocked' | 'Security' | 'Wallpaper'| 'Request Account Info' | 'Keyboard Shortcuts' | 'Help'
 
 type SideBarProps = {
     title: SettingType,
@@ -59,6 +60,9 @@ export const settingsModal: SettingsModal[] = [
   }, {
     title: 'Privacy',
     component: <PrivacyOptions />
+  }, {
+    title: 'Blocked',
+    component: <BlockedContacts />
   }, {
     title: 'Security',
     component: <SecurityOptions />

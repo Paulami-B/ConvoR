@@ -1,17 +1,16 @@
 import VerticalSideBar from '../components/VerticalSideBar'
 import { appItems } from '../utils/props/AppProps'
-import { useSetOption } from '../utils/customHooks/menuOption'
-import SettingsLayout from '../layouts/SettingsLayout';
+import { useOptionStore } from '../utils/slices/menuSlice'
 
 export default function AppPage() {
-  const { option } = useSetOption();
+  const { option } = useOptionStore();
   return (
     <div className='h-screen w-screen md:grid md:grid-cols-12'>
       <div className='hidden md:block md:col-span-1'>
         <VerticalSideBar />
       </div>
       <div className='md:col-span-11'>
-        <SettingsLayout />
+        {appItems.find(item => item.name==option)?.component}
       </div>
     </div>
   )
