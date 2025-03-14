@@ -8,7 +8,7 @@ import CallHistory from "../components/CallHistory";
 
 export default function ChatLayout() {
   const [activeTab, setActiveTab] = useState<'chats' | 'chatContainer'>('chats');
-    const {option, setOption} = useOptionStore();
+    const { option } = useOptionStore();
   const [showChats, setShowChats] = useState<boolean>(false);
   const setTab = () => {
     setActiveTab(activeTab=='chats' ? 'chatContainer' : 'chats')

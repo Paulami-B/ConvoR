@@ -5,7 +5,7 @@ import { GrGroup } from "react-icons/gr";
 import { LuCircleDashed } from "react-icons/lu";
 import { TbSettings } from "react-icons/tb";
 
-export type TitleType = 'message' | 'groups' | 'updates' | 'call' | 'settings'
+export type TitleType = 'message' | 'groups' | 'stories' | 'call' | 'settings'
 
 type SideBarProps = {
     title: TitleType,
@@ -20,8 +20,8 @@ export const sidebarMenuItems: SideBarProps[] = [
         title: 'groups',
         icon: <GrGroup className="text-2xl" />
     }, {
-        title: 'updates',
-        icon: <LuCircleDashed strokeWidth={2} />
+        title: 'stories',
+        icon: <LuCircleDashed strokeWidth={2.5} />
     }, {
         title: 'call',
         icon: <FiPhone className="text-2xl" />
