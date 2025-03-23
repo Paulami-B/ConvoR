@@ -4,6 +4,11 @@ import http from "http";
 import helmet from "helmet";    // Use Helmet to secure HTTP headers
 import rateLimit from "express-rate-limit";
 import cors from "cors";
+import dotenv from "dotenv";
+import { prismaClient } from "./utils/db";
+const authRoutes = require("./routes/auth.route")
+
+dotenv.config();
 
 const app = express();
 app.use(express.json({limit: "100kb"}));
@@ -25,7 +30,20 @@ const limiter = rateLimit({
     message: "Too many requests from this IP. Please try again in one hour"
 });
 
+async function checkConnection() {
+    try {
+      // Attempt a simple query to verify connection
+      await prismaClient.$queryRaw`SELECT 1`;
+      console.log('Connected to the database successfully.');
+    } catch (error) {
+      console.error('Failed to connect to the database:', error);
+    }
+  }
+checkConnection();
+
 app.use('/convor', limiter);
+
+app.use('/convor/auth', authRoutes);
 
 const server = http.createServer(app);
 
